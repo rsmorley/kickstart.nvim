@@ -1,7 +1,8 @@
 vim.keymap.set('n', '<C-s>', '<CMD>w<CR>')
 vim.keymap.set('n', '<leader>q', '<CMD>q<CR>')
 
-vim.keymap.set('n', '<C-x>', ':split<BAR>:terminal<CR>')
+-- removed since this is included in snacks
+-- vim.keymap.set('n', '<C-x>', ':split<BAR>:terminal<CR>')
 
 -- window navigation
 vim.keymap.set('n', '<C-left>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
