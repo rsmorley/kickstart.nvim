@@ -6,7 +6,7 @@ return {
     bigfile = { enabled = true },
     notifier = {
       enabled = true,
-      timeout = 3000,
+      timeout = 5000,
     },
     quickfile = { enabled = true },
     statuscolumn = { enabled = true },
