@@ -14,7 +14,7 @@ return {
       },
     },
     notifier = {
-      enabled = false, -- doesn't handle confirmations
+      enabled = true, -- doesn't handle confirmations
       timeout = 5000,
       width = { min = 40, max = 0.6 },
     },
