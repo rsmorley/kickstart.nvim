@@ -3,14 +3,10 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  {
-    'rcarriga/nvim-notify',
-    opts = {
-      enabled = true,
-      -- needed to prevent error from noice
-      background_colour = '#000000',
-    },
-  },
+  -- Definition files for LUA centric Node.js
+  { 'Bilal2453/luvit-meta', lazy = true },
+  -- Highlight todo, notes, etc in comments
+  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
   -- command line replacement
   {
     'folke/noice.nvim',
@@ -34,11 +30,5 @@ return {
       --   If not available, we use `mini` as the fallback
       'rcarriga/nvim-notify',
     },
-  },
-  -- used by markdown.nvim
-  {
-    'echasnovski/mini.icons',
-    version = false,
-    lazy = true,
   },
 }

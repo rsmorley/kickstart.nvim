@@ -4,6 +4,9 @@ return {
     name = 'catppuccin',
     priority = 1000,
     lazy = false,
+    init = function()
+      vim.cmd.colorscheme 'catppuccin-mocha'
+    end,
     opts = {
       transperent_background = true,
       flavour = 'mocha',
