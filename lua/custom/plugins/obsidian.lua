@@ -1,42 +1,49 @@
 return {
   {
-    'epwalsh/obsidian.nvim',
+    'obsidian-nvim/obsidian.nvim',
     enabled = true,
     version = '*',
+    ---@module 'obsidian'
+    ---@type obsidian.config
     lazy = true,
     ft = 'markdown',
     dependencies = {
       -- Required.
-      'nvim-lua/plenary.nvim',
+      'saghen/blink.cmp',
+      'folke/snacks.nvim',
+    },
+    picker = {
+      name = 'snacks.picker',
     },
     keys = {
       {
         '<leader>os',
-        '<cmd>ObsidianSearch<CR>',
+        '<cmd>Obsidian search<CR>',
         desc = 'Search for notes in vault',
       },
       {
         '<leader>on',
-        '<cmd>ObsidianNew<CR>',
+        '<cmd>Obsidian new<CR>',
         desc = 'Create new note',
       },
       {
         '<leader>od',
-        '<cmd>ObsidianDailies<CR>',
+        '<cmd>Obsidian dailies<CR>',
         desc = 'Open dailies picker',
       },
       {
         '<leader>ot',
-        '<cmd>ObsidianToday<CR>',
+        '<cmd>Obsidian today<CR>',
         desc = 'Create daily note for today',
       },
     },
     opts = {
+      legacy_commands = false,
       ui = { enable = false },
       workspaces = {
         {
           name = 'rtfm',
-          path = '/obsidian/rtfm',
+          path = '~/CADE/rtfm',
         },
       },
       daily_notes = {
